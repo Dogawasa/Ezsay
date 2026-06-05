@@ -14,9 +14,7 @@ Or open `index.html` directly in a browser.
 
 ## Login
 
-Create an account with username, email, and password, or log in with an existing username/email and password. Accounts are stored locally in the browser for this static version.
-
-The email-link button is a UI placeholder for a future backend email service.
+Create one local account with a unique username, email, and password, or log in with an existing username/email and password. Accounts are stored locally in the browser for this static version.
 
 ## Screens
 
