@@ -16,6 +16,10 @@ Or open `index.html` directly in a browser.
 
 Create one local account with a unique username, email, and password, or log in with an existing username/email and password. Accounts are stored locally in the browser for this static version.
 
+## Design
+
+`design-upgrade.css` and `design-upgrade.js` add the polished AI mentor treatment, including the login review protocol, practice-room AI status, and refined visual styling.
+
 ## Screens
 
 - Login
