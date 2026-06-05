@@ -20,6 +20,8 @@ Create one local account with a unique username, email, and password, or log in 
 
 `design-upgrade.css` and `design-upgrade.js` add the polished AI mentor treatment, including the login review protocol, practice-room AI status, and refined visual styling.
 
+`practice-upgrade.css` and `practice-upgrade.js` add the live Practice Room readiness board with word-target progress and thesis, evidence, structure, and closing checks.
+
 ## Screens
 
 - Login
