@@ -2,7 +2,7 @@
 
 A static website app for practicing essay writing with topic generation, writing modes, examiner-style review, per-user writing history, and a practice calendar.
 
-## Open
+## Open Locally
 
 Use the local server URL:
 
@@ -14,7 +14,9 @@ Or open `index.html` directly in a browser.
 
 ## Login
 
-Use a username and password to enter a separate local writing space for that user.
+Create an account with username, email, and password, or log in with an existing username/email and password. Accounts are stored locally in the browser for this static version.
+
+The email-link button is a UI placeholder for a future backend email service.
 
 ## Screens
 
@@ -25,6 +27,14 @@ Use a username and password to enter a separate local writing space for that use
 - History: previous essays and scores
 - Calendar: red dots on practice days
 
-## GitHub Pages
+## GitHub Pages Launch
 
-This app is static. To publish with GitHub Pages, upload these files to a repository and enable Pages from the `main` branch root.
+This project is configured for GitHub Pages, not Netlify.
+
+1. Upload the repository contents so `index.html`, `app.js`, `styles.css`, `.nojekyll`, `assets/`, and `.github/workflows/deploy-github-pages.yml` are at the repository root.
+2. In GitHub, open the repository settings.
+3. Go to **Pages**.
+4. Set **Build and deployment** > **Source** to **GitHub Actions**.
+5. Push to `main` or `master`, then open the **Actions** tab and wait for **Deploy to GitHub Pages** to finish.
+
+After the workflow completes, the site will be available at the Pages URL shown in the deployment summary.
