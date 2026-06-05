@@ -1,0 +1,301 @@
+:root {
+  --ink: oklch(24% 0.035 256);
+  --muted: oklch(48% 0.035 258);
+  --paper: oklch(96% 0.02 83);
+  --panel: oklch(99% 0.012 83);
+  --line: oklch(86% 0.022 80);
+  --navy: oklch(29% 0.075 255);
+  --blue: oklch(48% 0.105 238);
+  --burgundy: oklch(46% 0.14 9);
+  --gold: oklch(70% 0.12 78);
+  --green: oklch(54% 0.11 162);
+  --red: oklch(55% 0.15 15);
+  --shadow: 0 24px 70px oklch(26% 0.06 252 / 0.14);
+}
+
+body {
+  background:
+    radial-gradient(circle at 22% 18%, oklch(86% 0.12 80 / 0.18), transparent 26%),
+    linear-gradient(90deg, oklch(28% 0.06 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, oklch(99% 0.01 83) 0%, var(--paper) 100%);
+  background-size: auto, 44px 44px, auto;
+}
+
+body[data-theme="dark"] {
+  --ink: oklch(95% 0.02 245);
+  --muted: oklch(76% 0.04 248);
+  --paper: oklch(21% 0.035 258);
+  --panel: oklch(25% 0.045 258);
+  --line: oklch(39% 0.055 256);
+  --navy: oklch(17% 0.04 258);
+  --blue: oklch(72% 0.105 235);
+  --burgundy: oklch(64% 0.13 12);
+  --gold: oklch(80% 0.11 78);
+  --green: oklch(72% 0.1 162);
+  --red: oklch(72% 0.13 15);
+  --shadow: 0 24px 70px oklch(8% 0.02 255 / 0.38);
+}
+
+.login-panel {
+  background:
+    linear-gradient(160deg, oklch(31% 0.075 254) 0%, oklch(22% 0.055 258) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto -18% -20% 26%;
+  height: 240px;
+  background:
+    linear-gradient(110deg, oklch(78% 0.13 79 / 0.26), oklch(57% 0.13 232 / 0.18));
+  transform: rotate(-9deg);
+  pointer-events: none;
+}
+
+.login-panel > div {
+  position: relative;
+  z-index: 1;
+}
+
+.mark {
+  border-color: oklch(92% 0.04 80 / 0.5);
+  background: oklch(98% 0.02 80 / 0.08);
+}
+
+.login-copy h1 {
+  max-width: 580px;
+}
+
+.mentor-card,
+.ai-lens-panel,
+.mentor-status {
+  border: 1px solid oklch(91% 0.05 82 / 0.2);
+  background: oklch(98% 0.02 80 / 0.09);
+  box-shadow: 0 18px 44px oklch(14% 0.04 255 / 0.18);
+}
+
+.ai-lens-panel {
+  max-width: 500px;
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: var(--radius);
+  color: oklch(98% 0.015 80);
+}
+
+.ai-lens-kicker,
+.mentor-status span:first-child,
+.ai-review-strip span {
+  display: block;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ai-lens-panel ul {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-lens-panel li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: oklch(96% 0.02 82 / 0.86);
+  font-weight: 700;
+}
+
+.ai-lens-panel li span {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--gold);
+  box-shadow: 0 0 0 5px oklch(76% 0.12 78 / 0.13);
+}
+
+.login-form {
+  box-shadow:
+    0 26px 80px oklch(27% 0.055 255 / 0.12),
+    0 1px 0 oklch(100% 0 0 / 0.8) inset;
+}
+
+.auth-tabs {
+  background: oklch(96% 0.018 82);
+}
+
+.auth-tabs button,
+.primary-btn,
+.secondary-btn,
+.mode-btn,
+.topic-card,
+.nav-item,
+.fix-btn,
+.menu-action {
+  transition:
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.topic-card:hover,
+.nav-item:hover {
+  transform: translateY(-1px);
+}
+
+.primary-btn {
+  box-shadow: 0 14px 30px oklch(45% 0.13 9 / 0.2);
+}
+
+.app-shell {
+  background:
+    linear-gradient(180deg, oklch(98% 0.012 82), oklch(95% 0.025 82));
+}
+
+.sidebar {
+  background:
+    linear-gradient(180deg, oklch(24% 0.065 255) 0%, oklch(20% 0.05 258) 100%);
+  color: oklch(97% 0.02 80);
+}
+
+.sidebar .brand,
+.sidebar-note {
+  color: oklch(97% 0.02 80);
+}
+
+.sidebar-note {
+  background: oklch(98% 0.02 80 / 0.08);
+  border-color: oklch(95% 0.03 80 / 0.16);
+}
+
+.mentor-status {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: var(--radius);
+}
+
+.mentor-status strong {
+  display: block;
+  margin: 6px 0;
+  color: oklch(99% 0.012 80);
+  font-size: 16px;
+}
+
+.mentor-status p {
+  margin: 0;
+  color: oklch(92% 0.025 85 / 0.82);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.nav-item.active {
+  box-shadow: 0 10px 24px oklch(13% 0.04 256 / 0.18);
+}
+
+.topbar,
+.panel {
+  border-color: oklch(86% 0.025 80);
+}
+
+.practice-main {
+  overflow: hidden;
+}
+
+.ai-review-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: -2px 0 22px;
+  padding: 14px 16px;
+  border: 1px solid oklch(85% 0.03 80);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(90deg, oklch(98% 0.02 82), oklch(96% 0.03 92));
+}
+
+.ai-review-strip strong {
+  display: block;
+  margin-top: 4px;
+}
+
+.ai-review-strip p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.ai-review-strip .ai-meter {
+  min-width: 118px;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: oklch(86% 0.022 80);
+}
+
+.ai-review-strip .ai-meter i {
+  display: block;
+  width: 68%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+}
+
+.helper {
+  border: 1px solid oklch(86% 0.025 80);
+  border-radius: var(--radius);
+}
+
+.helper-head span {
+  background: oklch(93% 0.035 83);
+  color: var(--burgundy);
+}
+
+.issue-card {
+  background: oklch(98% 0.014 83);
+}
+
+.issue-card.clear {
+  background: oklch(95% 0.04 153);
+}
+
+.right-rail {
+  background:
+    linear-gradient(180deg, oklch(99% 0.012 83), oklch(97% 0.018 83));
+}
+
+body[data-theme="dark"] .app-shell,
+body[data-theme="dark"] .right-rail {
+  background:
+    linear-gradient(180deg, oklch(21% 0.035 258), oklch(18% 0.035 258));
+}
+
+body[data-theme="dark"] .ai-review-strip {
+  border-color: var(--line);
+  background:
+    linear-gradient(90deg, oklch(25% 0.045 258), oklch(22% 0.045 248));
+}
+
+body[data-theme="dark"] .ai-review-strip .ai-meter {
+  background: oklch(38% 0.05 255);
+}
+
+@media (max-width: 880px) {
+  .ai-review-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ai-review-strip .ai-meter {
+    width: 100%;
+  }
+}
