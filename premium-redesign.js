@@ -89,6 +89,8 @@
       [".mentor-status span", "Writing mentor"],
       [".studio-mentor-card span", "Mentor state"],
       [".ai-review-strip .label, .ai-review-strip span", "Review readiness"],
+      [".helper .hint strong", "Exam focus locked"],
+      [".helper .hint span", "Write as if this is a real test. The mentor will review your draft after you submit."],
     ];
 
     copyUpdates.forEach(([selector, text]) => {
@@ -98,8 +100,38 @@
     });
   }
 
+  function ensureHardModeStyle() {
+    if (document.querySelector("#premium-hard-mode-style")) return;
+    const style = document.createElement("style");
+    style.id = "premium-hard-mode-style";
+    style.textContent = `
+      .premium-redesign .helper .hint,
+      .premium-redesign .helper .hard-mode-hint {
+        border-color: rgba(99, 215, 215, 0.28);
+        background: rgba(255, 255, 255, 0.07);
+        color: #f8fafc;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+      }
+
+      .premium-redesign .helper .hint strong,
+      .premium-redesign .helper .hard-mode-hint strong {
+        color: #63d7d7;
+        font-size: 0.86rem;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      .premium-redesign .helper .hint span,
+      .premium-redesign .helper .hard-mode-hint span {
+        color: #d3dfec;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   function enhance() {
     document.body.classList.add("premium-redesign");
+    ensureHardModeStyle();
     refineCopy();
     ensureHero();
     enrichEmptyStates();
