@@ -15,9 +15,9 @@
         copy: "Jump into practice, review your progress, and keep every draft tied to real improvement.",
       },
       practice: {
-        eyebrow: "Practice Studio",
-        title: "Draft with pressure, feedback, and focus.",
-        copy: "Choose a prompt, write in easy or hard mode, then use the mentor to sharpen your answer.",
+        eyebrow: "Practice Desk",
+        title: "Draft, learn, and improve every essay.",
+        copy: "Pick a prompt, write at your own pace, and use colorful feedback to improve the next draft.",
       },
       history: {
         eyebrow: "Progress Room",
@@ -84,6 +84,9 @@
         "<strong>Writing mentor</strong>A calm, demanding reviewer for students who want direct corrections and a clearer next draft.";
     }
 
+    const studioKicker = document.querySelector(".studio-kicker");
+    if (studioKicker) studioKicker.textContent = state.page === "practice" ? "EssayWise study room" : "EssayWise Academy";
+
     const practiceHead = document.querySelector(".practice-main > .section-head");
     if (practiceHead) {
       const title = practiceHead.querySelector("h2");
@@ -102,10 +105,14 @@
       if (message) message.textContent = "No live hints while you draft. Submit when you are ready for review.";
     }
 
+    const mentorState = document.querySelector(".studio-mentor-card strong");
+    if (mentorState?.textContent.includes("Live coaching")) mentorState.textContent = "Writing coach active";
+    if (mentorState?.textContent.includes("Exam mode")) mentorState.textContent = "Quiet practice mode";
+
     const copyUpdates = [
       [".ai-lens-kicker", "Review protocol"],
       [".mentor-status span", "Writing mentor"],
-      [".studio-mentor-card span", "Mentor state"],
+      [".studio-mentor-card span", "Coach status"],
       [".ai-review-strip .label, .ai-review-strip span", "Review readiness"],
     ];
 
