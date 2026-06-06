@@ -2,9 +2,9 @@
   function pageCopy() {
     if (!state.loggedIn) {
       return {
-        eyebrow: "EssayWise Academy",
-        title: "Train essays like a serious writing studio.",
-        copy: "Live correction, prompt focus, score review, and revision guidance in one private workspace.",
+        eyebrow: "Ezsay Academy",
+        title: "Practice essays with friendly feedback.",
+        copy: "Pick a prompt, write in your own space, and use clear coaching to improve every draft.",
       };
     }
 
@@ -84,8 +84,16 @@
         "<strong>Writing mentor</strong>A calm, demanding reviewer for students who want direct corrections and a clearer next draft.";
     }
 
+    document.title = "Ezsay Academy";
+
+    document.querySelectorAll(".brand").forEach((brand) => {
+      const label = brand.querySelector("span:last-child");
+      if (!label) return;
+      label.textContent = brand.closest(".login-panel") ? "Ezsay Academy" : "Ezsay";
+    });
+
     const studioKicker = document.querySelector(".studio-kicker");
-    if (studioKicker) studioKicker.textContent = state.page === "practice" ? "EssayWise study room" : "EssayWise Academy";
+    if (studioKicker) studioKicker.textContent = state.page === "practice" ? "Ezsay study room" : "Ezsay Academy";
 
     const practiceHead = document.querySelector(".practice-main > .section-head");
     if (practiceHead) {
@@ -134,12 +142,12 @@
         gap: 8px;
         max-width: 100%;
         padding: 14px;
-        border-color: rgba(99, 215, 215, 0.28);
+        border-color: rgba(48, 107, 161, 0.22);
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.07);
-        color: #f8fafc;
+        background: rgba(255, 255, 255, 0.72);
+        color: #172033;
         line-height: 1.45;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.64);
       }
 
       .premium-redesign .helper h3 {
@@ -150,7 +158,7 @@
       .premium-redesign .helper .hint strong,
       .premium-redesign .helper .hard-mode-hint strong {
         display: block;
-        color: #63d7d7;
+        color: #145f9d;
         font-size: 0.76rem;
         line-height: 1.2;
         text-transform: uppercase;
@@ -160,7 +168,7 @@
       .premium-redesign .helper .hint span,
       .premium-redesign .helper .hard-mode-hint span {
         display: block;
-        color: #d3dfec;
+        color: #34495f;
         font-size: 0.88rem;
         line-height: 1.5;
       }
