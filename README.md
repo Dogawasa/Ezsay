@@ -18,13 +18,15 @@ Create one local account with a unique username, email, and password, or log in 
 
 ## Design
 
-`design-upgrade.css` and `design-upgrade.js` add the polished AI mentor treatment, including the login review protocol, practice-room AI status, and refined visual styling.
+`design-upgrade.css` and `design-upgrade.js` add the login review protocol, practice-room mentor status, and refined visual styling.
 
 `practice-upgrade.css` and `practice-upgrade.js` add the live Practice Room readiness board with word-target progress and thesis, evidence, structure, and closing checks.
 
 `correction-upgrade.js` improves the live correction mentor with a stronger spelling dictionary, typo inference, grammar pattern checks, punctuation alerts, and multi-issue Apply Fix suggestions.
 
 `studio-redesign.css` and `studio-redesign.js` rebuild the visual UI into a modern writing-studio dashboard inspired by education and AI-writing dashboard patterns.
+
+`premium-redesign.css` and `premium-redesign.js` add a more professional product-grade interface with a dark app shell, stronger writing workspace hierarchy, upgraded empty states, and responsive mobile polish.
 
 ## Screens
 
