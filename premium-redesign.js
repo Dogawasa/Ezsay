@@ -92,13 +92,21 @@
       if (copy) copy.textContent = "Pick one brief, then use the range and checklist to plan your draft.";
     }
 
+    const helperTitle = document.querySelector(".helper h3");
+    const hardHint = document.querySelector(".helper .hard-mode-hint, .helper > .hint");
+    if (hardHint && helperTitle?.textContent.toLowerCase().includes("hard mode")) {
+      hardHint.classList.add("hard-mode-hint");
+      const label = hardHint.querySelector("strong");
+      const message = hardHint.querySelector("span");
+      if (label) label.textContent = "Focus mode";
+      if (message) message.textContent = "No live hints while you draft. Submit when you are ready for review.";
+    }
+
     const copyUpdates = [
       [".ai-lens-kicker", "Review protocol"],
       [".mentor-status span", "Writing mentor"],
       [".studio-mentor-card span", "Mentor state"],
       [".ai-review-strip .label, .ai-review-strip span", "Review readiness"],
-      [".helper .hard-mode-hint strong", "Focus mode"],
-      [".helper .hard-mode-hint span", "No live hints while you draft. Submit when you are ready for review."],
     ];
 
     copyUpdates.forEach(([selector, text]) => {
