@@ -84,13 +84,21 @@
         "<strong>Writing mentor</strong>A calm, demanding reviewer for students who want direct corrections and a clearer next draft.";
     }
 
+    const practiceHead = document.querySelector(".practice-main > .section-head");
+    if (practiceHead) {
+      const title = practiceHead.querySelector("h2");
+      const copy = practiceHead.querySelector("p");
+      if (title) title.textContent = "Prompt options";
+      if (copy) copy.textContent = "Pick one brief, then use the range and checklist to plan your draft.";
+    }
+
     const copyUpdates = [
       [".ai-lens-kicker", "Review protocol"],
       [".mentor-status span", "Writing mentor"],
       [".studio-mentor-card span", "Mentor state"],
       [".ai-review-strip .label, .ai-review-strip span", "Review readiness"],
-      [".helper .hint strong", "Exam focus locked"],
-      [".helper .hint span", "Write as if this is a real test. The mentor will review your draft after you submit."],
+      [".helper .hard-mode-hint strong", "Focus mode"],
+      [".helper .hard-mode-hint span", "No live hints while you draft. Submit when you are ready for review."],
     ];
 
     copyUpdates.forEach(([selector, text]) => {
@@ -107,23 +115,39 @@
     style.textContent = `
       .premium-redesign .helper .hint,
       .premium-redesign .helper .hard-mode-hint {
+        display: grid;
+        gap: 8px;
+        max-width: 100%;
+        padding: 14px;
         border-color: rgba(99, 215, 215, 0.28);
+        border-radius: 8px;
         background: rgba(255, 255, 255, 0.07);
         color: #f8fafc;
+        line-height: 1.45;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+      }
+
+      .premium-redesign .helper h3 {
+        font-size: 1rem;
+        line-height: 1.25;
       }
 
       .premium-redesign .helper .hint strong,
       .premium-redesign .helper .hard-mode-hint strong {
+        display: block;
         color: #63d7d7;
-        font-size: 0.86rem;
+        font-size: 0.76rem;
+        line-height: 1.2;
         text-transform: uppercase;
         letter-spacing: 0;
       }
 
       .premium-redesign .helper .hint span,
       .premium-redesign .helper .hard-mode-hint span {
+        display: block;
         color: #d3dfec;
+        font-size: 0.88rem;
+        line-height: 1.5;
       }
     `;
     document.head.appendChild(style);
