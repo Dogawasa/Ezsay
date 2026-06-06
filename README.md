@@ -2,12 +2,12 @@
 
 A static website app for practicing essay writing with topic generation, writing modes, examiner-style review, per-user writing history, and a practice calendar.
 
-## Open Locally
+## Official live website link:
 
-Use the local server URL:
+Use the link below:
 
 ```text
-http://127.0.0.1:4173
+https://dogawasa.github.io/Ezsay/
 ```
 
 Or open `index.html` directly in a browser.
