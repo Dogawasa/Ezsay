@@ -1,0 +1,724 @@
+:root {
+  --student-ink: oklch(22% 0.034 250);
+  --student-muted: oklch(47% 0.044 248);
+  --student-line: oklch(88% 0.035 232);
+  --student-paper: oklch(98% 0.02 92);
+  --student-surface: oklch(99% 0.014 86);
+  --student-sky: oklch(72% 0.14 220);
+  --student-sky-soft: oklch(94% 0.055 220);
+  --student-coral: oklch(70% 0.17 24);
+  --student-coral-soft: oklch(95% 0.05 24);
+  --student-mint: oklch(76% 0.13 165);
+  --student-mint-soft: oklch(94% 0.06 165);
+  --student-sun: oklch(86% 0.16 84);
+  --student-sun-soft: oklch(97% 0.07 84);
+  --student-lilac: oklch(74% 0.13 292);
+  --student-lilac-soft: oklch(95% 0.05 292);
+  --student-shadow: 0 22px 48px rgba(49, 69, 94, 0.14);
+}
+
+body.premium-redesign {
+  position: relative;
+  color: var(--student-ink);
+  background:
+    linear-gradient(135deg, oklch(96% 0.06 205), oklch(98% 0.055 88) 45%, oklch(96% 0.055 322)),
+    var(--student-paper);
+}
+
+body.premium-redesign::before {
+  background:
+    linear-gradient(90deg, rgba(39, 135, 198, 0.1) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(39, 135, 198, 0.08) 1px, transparent 1px);
+  background-size: 46px 46px;
+  opacity: 0.28;
+  z-index: 0;
+}
+
+.premium-redesign .login-shell {
+  position: relative;
+  z-index: 1;
+  background:
+    linear-gradient(135deg, var(--student-sky-soft), var(--student-sun-soft) 48%, var(--student-lilac-soft)),
+    var(--student-paper);
+}
+
+.premium-redesign .login-panel {
+  color: var(--student-ink);
+  background:
+    linear-gradient(135deg, rgba(255, 201, 76, 0.74), rgba(93, 214, 178, 0.72) 48%, rgba(255, 129, 105, 0.66)),
+    var(--student-surface);
+}
+
+.premium-redesign .login-copy h1 {
+  color: var(--student-ink);
+  text-wrap: balance;
+}
+
+.premium-redesign .login-copy p {
+  color: oklch(34% 0.05 246);
+}
+
+.premium-redesign .mentor-card,
+.premium-redesign .ai-lens-panel,
+.premium-redesign .studio-auth-strip {
+  border-color: rgba(38, 91, 139, 0.18);
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--student-ink);
+}
+
+.premium-redesign .login-form-wrap {
+  background:
+    linear-gradient(90deg, rgba(39, 135, 198, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(239, 248, 255, 0.9));
+  background-size: 42px 42px, auto;
+}
+
+.premium-redesign .login-form,
+.premium-redesign .profile-menu {
+  border-color: var(--student-line);
+  background: var(--student-surface);
+  box-shadow: var(--student-shadow);
+}
+
+.premium-redesign .auth-tabs {
+  background: var(--student-sky-soft);
+  border-color: rgba(55, 125, 194, 0.18);
+}
+
+.premium-redesign .auth-tabs button.active {
+  background: var(--student-coral);
+  color: oklch(99% 0.01 80);
+}
+
+.premium-redesign .app-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1560px, calc(100% - 28px));
+  border-color: rgba(38, 91, 139, 0.16);
+  background: var(--student-surface);
+  box-shadow: 0 28px 70px rgba(54, 78, 108, 0.18);
+}
+
+.premium-redesign .sidebar {
+  color: var(--student-ink);
+  border-right-color: rgba(38, 91, 139, 0.14);
+  background:
+    linear-gradient(180deg, var(--student-surface), var(--student-mint-soft) 62%, var(--student-sky-soft)),
+    var(--student-surface);
+}
+
+.premium-redesign .sidebar .brand {
+  border-color: rgba(38, 91, 139, 0.14);
+  background:
+    linear-gradient(135deg, rgba(255, 208, 76, 0.62), rgba(103, 214, 178, 0.6)),
+    var(--student-surface);
+}
+
+.premium-redesign .brand {
+  color: var(--student-ink);
+}
+
+.premium-redesign .mark {
+  background: var(--student-coral);
+  color: oklch(99% 0.01 80);
+  box-shadow: 0 12px 22px rgba(219, 83, 72, 0.24);
+}
+
+.premium-redesign .nav-item::before {
+  display: none;
+}
+
+.premium-redesign .nav-item {
+  min-height: 48px;
+  border: 1px solid transparent;
+  color: var(--student-muted);
+  background: transparent;
+}
+
+.premium-redesign .nav-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 8px;
+  color: var(--student-ink);
+  background: var(--student-sun-soft);
+}
+
+.premium-redesign .nav-item:nth-child(2) .nav-icon {
+  background: var(--student-mint-soft);
+}
+
+.premium-redesign .nav-item:nth-child(3) .nav-icon {
+  background: var(--student-lilac-soft);
+}
+
+.premium-redesign .nav-item:hover {
+  border-color: rgba(39, 135, 198, 0.22);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--student-ink);
+}
+
+.premium-redesign .nav-item.active {
+  border-color: rgba(39, 135, 198, 0.3);
+  background:
+    linear-gradient(135deg, rgba(255, 212, 89, 0.5), rgba(116, 210, 255, 0.46)),
+    var(--student-surface);
+  color: var(--student-ink);
+  box-shadow: 0 10px 22px rgba(49, 91, 122, 0.12);
+}
+
+.premium-redesign .sidebar-note,
+.premium-redesign .mentor-status {
+  border-color: rgba(39, 135, 198, 0.2);
+  background: rgba(255, 255, 255, 0.64);
+  color: var(--student-muted);
+}
+
+.premium-redesign .mentor-status span {
+  color: oklch(45% 0.12 165);
+}
+
+.premium-redesign .content {
+  background:
+    linear-gradient(90deg, rgba(34, 126, 188, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, oklch(98% 0.018 210), oklch(96% 0.025 205) 55%, oklch(98% 0.02 318));
+  background-size: 42px 42px, auto;
+}
+
+.premium-redesign .topbar {
+  border-bottom-color: rgba(38, 91, 139, 0.16);
+  background: rgba(255, 253, 245, 0.9);
+  color: var(--student-ink);
+}
+
+.premium-redesign .studio-kicker,
+.premium-redesign .welcome span {
+  color: oklch(45% 0.15 225);
+}
+
+.premium-redesign .welcome h1 {
+  color: var(--student-ink);
+}
+
+.premium-redesign .time-pill,
+.premium-redesign .word-pill,
+.premium-redesign .icon-btn,
+.premium-redesign .topbar .avatar {
+  border-color: rgba(38, 91, 139, 0.18);
+  background: var(--student-surface);
+  color: var(--student-ink);
+}
+
+.premium-redesign .word-pill {
+  border-color: rgba(39, 135, 198, 0.2);
+  background: var(--student-sky-soft);
+  color: oklch(39% 0.14 225);
+}
+
+.premium-redesign .time-pill {
+  background: var(--student-sun-soft);
+}
+
+.premium-redesign .icon-btn {
+  background: var(--student-lilac-soft);
+}
+
+.premium-redesign .avatar,
+.premium-redesign .profile-card .avatar,
+.premium-redesign .topbar .avatar {
+  background: var(--student-coral);
+  color: oklch(99% 0.01 80);
+}
+
+.premium-hero {
+  border-color: rgba(38, 91, 139, 0.16);
+  background:
+    linear-gradient(135deg, rgba(255, 213, 88, 0.62), rgba(110, 211, 255, 0.58) 52%, rgba(190, 152, 255, 0.5)),
+    var(--student-surface);
+  color: var(--student-ink);
+  box-shadow: var(--student-shadow);
+}
+
+.premium-hero::before {
+  display: none;
+}
+
+.premium-hero > div:first-child {
+  padding: 30px;
+}
+
+.premium-hero span {
+  color: oklch(42% 0.16 226);
+}
+
+.premium-hero h2 {
+  color: var(--student-ink);
+  text-wrap: balance;
+}
+
+.premium-hero p {
+  color: oklch(38% 0.052 245);
+}
+
+.premium-hero-panel {
+  border-left-color: rgba(38, 91, 139, 0.14);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.premium-hero-panel div {
+  border-bottom-color: rgba(38, 91, 139, 0.12);
+}
+
+.premium-hero-panel strong {
+  color: oklch(35% 0.14 224);
+}
+
+.premium-hero-panel span {
+  color: var(--student-muted);
+}
+
+.premium-redesign .panel,
+.premium-redesign .right-rail,
+.premium-redesign .helper {
+  border-color: rgba(38, 91, 139, 0.16);
+  background: var(--student-surface);
+  box-shadow: 0 16px 34px rgba(58, 79, 104, 0.12);
+}
+
+.premium-redesign .section-head {
+  border-bottom-color: rgba(38, 91, 139, 0.12);
+}
+
+.premium-redesign .section-head h2,
+.premium-redesign .review-panel h2,
+.premium-redesign .rail-title {
+  color: var(--student-ink);
+}
+
+.premium-redesign .section-head p,
+.premium-redesign .review-panel > p {
+  color: var(--student-muted);
+}
+
+.premium-redesign .primary-btn {
+  background: linear-gradient(135deg, var(--student-coral), oklch(64% 0.16 347));
+  color: oklch(99% 0.01 80);
+  box-shadow: 0 18px 30px rgba(216, 91, 86, 0.24);
+}
+
+.premium-redesign .primary-btn:hover {
+  background: linear-gradient(135deg, oklch(66% 0.17 24), oklch(60% 0.17 347));
+}
+
+.premium-redesign .secondary-btn,
+.premium-redesign .menu-action {
+  border-color: rgba(38, 91, 139, 0.18);
+  background: var(--student-surface);
+  color: var(--student-ink);
+}
+
+.premium-redesign .secondary-btn:hover,
+.premium-redesign .menu-action:hover {
+  border-color: rgba(39, 135, 198, 0.34);
+  background: var(--student-sky-soft);
+  color: oklch(36% 0.13 225);
+}
+
+.premium-redesign .topics {
+  gap: 16px;
+}
+
+.premium-redesign .topic-card,
+.premium-redesign .focus-summary,
+.premium-redesign .focus-check,
+.premium-redesign .metric,
+.premium-redesign .history-card,
+.premium-redesign .review-item {
+  border-color: rgba(38, 91, 139, 0.16);
+  background: var(--student-surface);
+}
+
+.premium-redesign .topic-card {
+  position: relative;
+  min-height: 132px;
+  overflow: hidden;
+}
+
+.premium-redesign .topic-card:nth-child(1) {
+  background: linear-gradient(180deg, var(--student-sky-soft), var(--student-surface));
+}
+
+.premium-redesign .topic-card:nth-child(2) {
+  background: linear-gradient(180deg, var(--student-sun-soft), var(--student-surface));
+}
+
+.premium-redesign .topic-card:nth-child(3) {
+  background: linear-gradient(180deg, var(--student-lilac-soft), var(--student-surface));
+}
+
+.premium-redesign .topic-card strong {
+  color: var(--student-ink);
+}
+
+.premium-redesign .topic-card.active {
+  border-color: oklch(59% 0.16 225);
+  background:
+    linear-gradient(135deg, rgba(113, 205, 255, 0.34), rgba(255, 213, 88, 0.42)),
+    var(--student-surface);
+  box-shadow:
+    0 16px 28px rgba(56, 115, 178, 0.14),
+    inset 0 0 0 2px rgba(39, 135, 198, 0.2);
+}
+
+.premium-redesign .topic-card span,
+.premium-redesign .tag,
+.premium-redesign .toolbar-meta span {
+  background: rgba(255, 255, 255, 0.74);
+  color: oklch(37% 0.12 225);
+}
+
+.premium-redesign .ai-review-strip,
+.premium-redesign .editor-toolbar {
+  border-color: rgba(60, 163, 142, 0.28);
+  background:
+    linear-gradient(135deg, rgba(255, 228, 112, 0.38), rgba(119, 224, 187, 0.32)),
+    var(--student-surface);
+  box-shadow: none;
+}
+
+.premium-redesign .ai-review-strip span,
+.premium-redesign .label,
+.premium-redesign .focus-summary span,
+.premium-redesign .studio-editor-label span,
+.premium-redesign .studio-mentor-card span {
+  color: oklch(43% 0.14 225);
+}
+
+.premium-redesign .focus-check.ready {
+  border-color: rgba(42, 162, 124, 0.32);
+  background: var(--student-mint-soft);
+}
+
+.premium-redesign .studio-editor-label {
+  background:
+    linear-gradient(135deg, var(--student-sky-soft), var(--student-lilac-soft));
+  color: var(--student-ink);
+}
+
+.premium-redesign .studio-editor-label strong {
+  color: var(--student-ink);
+}
+
+.premium-redesign .editor-wrap {
+  border-color: rgba(38, 91, 139, 0.16);
+  background:
+    linear-gradient(90deg, rgba(39, 135, 198, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 252, 242, 0.95));
+  background-size: 34px 34px, auto;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+    0 18px 34px rgba(58, 79, 104, 0.09);
+}
+
+.premium-redesign #essayText,
+.premium-redesign .editor-highlights {
+  color: var(--student-ink);
+}
+
+.premium-redesign input,
+.premium-redesign textarea,
+.premium-redesign select {
+  border-color: rgba(38, 91, 139, 0.18);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--student-ink);
+}
+
+.premium-redesign input:focus,
+.premium-redesign textarea:focus,
+.premium-redesign select:focus {
+  outline: 3px solid rgba(81, 183, 235, 0.28);
+  border-color: oklch(61% 0.14 225);
+}
+
+.premium-redesign .helper {
+  background:
+    linear-gradient(180deg, var(--student-lilac-soft), var(--student-sky-soft));
+  color: var(--student-ink);
+}
+
+.premium-redesign .helper h3 {
+  color: var(--student-ink);
+}
+
+.premium-redesign .helper-head span {
+  background: var(--student-coral-soft);
+  color: oklch(43% 0.15 24);
+}
+
+.premium-redesign .issue-card,
+.premium-redesign .hint {
+  border-color: rgba(228, 115, 99, 0.22);
+  background: var(--student-coral-soft);
+  color: var(--student-ink);
+}
+
+.premium-redesign .issue-card p,
+.premium-redesign .hint span {
+  color: var(--student-muted);
+}
+
+.premium-redesign .helper .hint,
+.premium-redesign .helper .hard-mode-hint {
+  border-color: rgba(39, 135, 198, 0.22);
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--student-ink);
+}
+
+.premium-redesign .helper .hint strong,
+.premium-redesign .helper .hard-mode-hint strong {
+  color: oklch(39% 0.14 225);
+}
+
+.premium-redesign .helper .hint span,
+.premium-redesign .helper .hard-mode-hint span {
+  color: var(--student-muted);
+}
+
+.premium-redesign .issue-card.clear {
+  border-color: rgba(42, 162, 124, 0.28);
+  background: var(--student-mint-soft);
+}
+
+.premium-redesign .fix-btn {
+  background: var(--student-mint);
+  color: oklch(20% 0.035 165);
+}
+
+.premium-redesign .right-rail {
+  background:
+    linear-gradient(180deg, rgba(255, 241, 184, 0.58), rgba(235, 247, 255, 0.82)),
+    var(--student-surface);
+}
+
+.premium-redesign .rail-block {
+  border-color: rgba(38, 91, 139, 0.12);
+}
+
+.premium-redesign .profile-card {
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.premium-redesign .studio-mentor-card,
+.premium-redesign .score {
+  background:
+    linear-gradient(135deg, var(--student-sky-soft), var(--student-lilac-soft));
+  color: var(--student-ink);
+}
+
+.premium-redesign .studio-mentor-card strong,
+.premium-redesign .score-detail strong {
+  color: var(--student-ink);
+}
+
+.premium-redesign .studio-mentor-card p {
+  color: var(--student-muted);
+}
+
+.premium-redesign .day {
+  border-color: rgba(38, 91, 139, 0.14);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.premium-redesign .day.practice {
+  border-color: rgba(42, 162, 124, 0.34);
+  background: var(--student-mint-soft);
+  color: oklch(38% 0.12 165);
+}
+
+.premium-redesign .metric {
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.premium-redesign .metric:nth-child(1) {
+  background: var(--student-sky-soft);
+}
+
+.premium-redesign .metric:nth-child(2) {
+  background: var(--student-sun-soft);
+}
+
+.premium-redesign .metric:nth-child(3) {
+  background: var(--student-mint-soft);
+}
+
+.premium-redesign .metric:nth-child(4) {
+  background: var(--student-lilac-soft);
+}
+
+.premium-redesign .empty-state {
+  border-color: rgba(38, 91, 139, 0.18);
+  background:
+    linear-gradient(135deg, var(--student-sun-soft), var(--student-sky-soft) 54%, var(--student-lilac-soft));
+  color: var(--student-ink);
+}
+
+.premium-redesign .empty-state::before,
+.premium-redesign .empty-state::after {
+  display: none;
+}
+
+.premium-redesign .empty-state > .studio-empty-kicker,
+.premium-redesign .empty-state > h3,
+.premium-redesign .empty-state > p,
+.premium-redesign .empty-state > button,
+.premium-redesign .empty-state > .premium-empty-grid {
+  margin-left: 0;
+}
+
+.premium-redesign .studio-empty-kicker {
+  color: oklch(41% 0.15 225);
+}
+
+.premium-redesign .empty-state h3 {
+  color: var(--student-ink);
+}
+
+.premium-redesign .empty-state p {
+  color: var(--student-muted);
+}
+
+.premium-redesign .empty-state .secondary-btn {
+  background: var(--student-coral);
+  color: oklch(99% 0.01 80);
+}
+
+.premium-redesign .premium-empty-grid div {
+  border-color: rgba(38, 91, 139, 0.14);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.premium-redesign .premium-empty-grid strong {
+  color: oklch(38% 0.14 225);
+}
+
+.premium-redesign .premium-empty-grid span {
+  color: var(--student-muted);
+}
+
+.premium-redesign .score-ring {
+  border-color: var(--student-coral);
+  background: var(--student-surface);
+  color: oklch(43% 0.15 24);
+}
+
+.premium-redesign .revision-card {
+  border-color: rgba(38, 91, 139, 0.16);
+  background:
+    linear-gradient(90deg, rgba(39, 135, 198, 0.07) 1px, transparent 1px),
+    var(--student-surface);
+  background-size: 34px 34px, auto;
+}
+
+body.premium-redesign[data-theme='dark'] {
+  background:
+    linear-gradient(135deg, oklch(94% 0.055 205), oklch(96% 0.06 88) 45%, oklch(94% 0.055 322)),
+    var(--student-paper);
+}
+
+body.premium-redesign[data-theme='dark'] .content,
+body.premium-redesign[data-theme='dark'] .topbar,
+body.premium-redesign[data-theme='dark'] .panel,
+body.premium-redesign[data-theme='dark'] .right-rail,
+body.premium-redesign[data-theme='dark'] .login-form,
+body.premium-redesign[data-theme='dark'] .profile-menu,
+body.premium-redesign[data-theme='dark'] .topic-card,
+body.premium-redesign[data-theme='dark'] .metric,
+body.premium-redesign[data-theme='dark'] .history-card,
+body.premium-redesign[data-theme='dark'] .review-item {
+  color: var(--student-ink);
+}
+
+body.premium-redesign[data-theme='dark'] .content {
+  background:
+    linear-gradient(90deg, rgba(34, 126, 188, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, oklch(98% 0.018 210), oklch(96% 0.025 205) 55%, oklch(98% 0.02 318));
+  background-size: 42px 42px, auto;
+}
+
+body.premium-redesign[data-theme='dark'] .topbar,
+body.premium-redesign[data-theme='dark'] .panel,
+body.premium-redesign[data-theme='dark'] .right-rail,
+body.premium-redesign[data-theme='dark'] .login-form,
+body.premium-redesign[data-theme='dark'] .profile-menu,
+body.premium-redesign[data-theme='dark'] .topic-card,
+body.premium-redesign[data-theme='dark'] .metric,
+body.premium-redesign[data-theme='dark'] .history-card,
+body.premium-redesign[data-theme='dark'] .review-item,
+body.premium-redesign[data-theme='dark'] .revision-card,
+body.premium-redesign[data-theme='dark'] .editor-wrap,
+body.premium-redesign[data-theme='dark'] input,
+body.premium-redesign[data-theme='dark'] textarea,
+body.premium-redesign[data-theme='dark'] select {
+  border-color: rgba(38, 91, 139, 0.16);
+  background-color: var(--student-surface);
+}
+
+body.premium-redesign[data-theme='dark'] .section-head h2,
+body.premium-redesign[data-theme='dark'] .review-panel h2,
+body.premium-redesign[data-theme='dark'] .rail-title,
+body.premium-redesign[data-theme='dark'] .welcome h1,
+body.premium-redesign[data-theme='dark'] .empty-state h3 {
+  color: var(--student-ink);
+}
+
+body.premium-redesign[data-theme='dark'] .section-head p,
+body.premium-redesign[data-theme='dark'] .review-panel > p,
+body.premium-redesign[data-theme='dark'] .empty-state p,
+body.premium-redesign[data-theme='dark'] .premium-empty-grid span {
+  color: var(--student-muted);
+}
+
+@media (max-width: 980px) {
+  .premium-redesign .app-shell {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .premium-redesign .sidebar {
+    background: var(--student-surface);
+  }
+
+  .premium-redesign .premium-hero-panel {
+    border-top-color: rgba(38, 91, 139, 0.14);
+  }
+
+  .premium-redesign .premium-hero-panel div {
+    border-right-color: rgba(38, 91, 139, 0.12);
+  }
+}
+
+@media (max-width: 680px) {
+  .premium-redesign .page,
+  .premium-redesign .panel {
+    padding: 18px;
+  }
+
+  .premium-hero > div:first-child {
+    padding: 24px;
+  }
+
+  .premium-hero h2 {
+    font-size: 2rem;
+  }
+
+  .premium-redesign .top-actions {
+    gap: 8px;
+  }
+
+  .premium-redesign .topic-card {
+    min-height: 112px;
+  }
+}
