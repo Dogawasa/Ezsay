@@ -1,0 +1,99 @@
+:root {
+  --ezsay-ink: oklch(20% 0.035 250);
+  --ezsay-muted: oklch(42% 0.044 248);
+  --ezsay-blue: oklch(43% 0.14 225);
+  --ezsay-green: oklch(39% 0.14 165);
+}
+
+.premium-redesign .brand span:last-child,
+.premium-redesign .login-panel .brand span:last-child {
+  color: var(--ezsay-ink);
+  font-weight: 900;
+}
+
+.premium-redesign .sidebar .brand {
+  background:
+    linear-gradient(135deg, rgba(255, 228, 112, 0.5), rgba(196, 238, 214, 0.58)),
+    var(--student-surface);
+  box-shadow: 0 12px 26px rgba(54, 78, 108, 0.1);
+}
+
+.premium-redesign .mentor-card,
+.premium-redesign .ai-lens-panel,
+.premium-redesign .studio-auth-strip {
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ezsay-ink);
+}
+
+.premium-redesign .ai-lens-panel {
+  background:
+    linear-gradient(135deg, rgba(226, 255, 241, 0.92), rgba(239, 247, 255, 0.94)),
+    var(--student-surface);
+}
+
+.premium-redesign .ai-lens-panel .ai-lens-kicker,
+.premium-redesign .ai-lens-kicker,
+.premium-redesign .mentor-status span,
+.premium-redesign .studio-mentor-card span,
+.premium-redesign .ai-review-strip span {
+  color: var(--ezsay-blue);
+}
+
+.premium-redesign .ai-lens-panel li,
+.premium-redesign .ai-review-strip strong,
+.premium-redesign .editor-toolbar strong,
+.premium-redesign .mentor-status strong,
+.premium-redesign .studio-mentor-card strong {
+  color: var(--ezsay-ink);
+}
+
+.premium-redesign .ai-lens-panel li span {
+  background: var(--student-sun);
+  box-shadow: 0 0 0 5px rgba(255, 210, 82, 0.22);
+}
+
+.premium-redesign .ai-review-strip,
+.premium-redesign .editor-toolbar {
+  background:
+    linear-gradient(135deg, rgba(255, 228, 112, 0.46), rgba(119, 224, 187, 0.42)),
+    var(--student-surface);
+}
+
+.premium-redesign .ai-review-strip p,
+.premium-redesign .editor-toolbar p,
+.premium-redesign .mentor-status p,
+.premium-redesign .studio-mentor-card p,
+.premium-redesign .helper .hint span,
+.premium-redesign .helper .hard-mode-hint span {
+  color: var(--ezsay-muted);
+}
+
+.premium-redesign .ai-review-strip .ai-meter {
+  background: rgba(48, 107, 161, 0.16);
+}
+
+.premium-redesign .ai-review-strip .ai-meter i {
+  background: oklch(51% 0.14 195);
+}
+
+.premium-redesign .mentor-status {
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.premium-redesign .helper .hint,
+.premium-redesign .helper .hard-mode-hint {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ezsay-ink);
+}
+
+.premium-redesign .helper .hint strong,
+.premium-redesign .helper .hard-mode-hint strong {
+  color: var(--ezsay-blue);
+}
+
+.premium-redesign .studio-mentor-card,
+.premium-redesign .score {
+  background:
+    linear-gradient(135deg, rgba(226, 247, 255, 0.94), rgba(242, 234, 255, 0.96));
+  color: var(--ezsay-ink);
+}
